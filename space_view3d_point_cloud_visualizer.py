@@ -341,12 +341,12 @@ class PCMeshInstancer():
         for j in range(ev):
             self.verts[(i * ev) + j] = self.def_mesh.vertices[j].co.to_tuple()
         # edges
-        if(len(self.def_edges) is not 0):
+        if(len(self.def_edges) != 0):
             for j in range(ee):
                 self.edges[(i * ee) + j] = ((i * ev) + self.def_edges[j][0],
                                             (i * ev) + self.def_edges[j][1], )
         # faces
-        if(len(self.def_faces) is not 0):
+        if(len(self.def_faces) != 0):
             for j in range(ef):
                 # tris
                 if(len(self.def_faces[j]) == 3):
